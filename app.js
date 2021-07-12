@@ -9,13 +9,7 @@ function MyWatch(){
     let min = date.getMinutes();
     let sec = date.getSeconds();
 
-    if (Hour > 12) {
-        Hour = Hour -12
-    }else if(Hour < 10){
-        Hour = "0" + hour
-    }
-    hour.textContent = Hour
-
+    hour.textContent = Hour < 10 ? ("0" + Hour) : Hour
     minute.textContent = min < 10 ? ("0" + min) : min;
     second.textContent = sec < 10 ? ("0" + sec) : sec;
 
